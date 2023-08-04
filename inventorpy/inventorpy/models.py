@@ -1,3 +1,4 @@
+import django
 from django.db import models
 
 
@@ -25,6 +26,8 @@ class InventoryTransaction(models.Model):
     )
     project = models.ForeignKey("Project", on_delete=models.CASCADE)
     quantity = models.IntegerField()
+    timestamp = models.TimeField(default=django.utils.timezone.now())
+    purchaser = models.CharField(max_length=100)
 
     @property
     def sku(self) -> str:

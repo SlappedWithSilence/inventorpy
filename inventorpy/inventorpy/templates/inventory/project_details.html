@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ project.name }} Details</title>
+</head>
+<body>
+    <p>Description: {{ project.description }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <a href="{% url 'project_list' %}">Back to List</a>
+    <table>
+    <tr>
+        <th>SKU</th>
+        <th>purchaser</th>
+        <th>quantity</th>
+        <th>timestamp</th>
+    </tr>
+    {% for transaction in query_results %}
+    <tr>
+        <td>{{ transaction.item.sku }}</td>
+        <td>{{ transaction.purchaser }}</td>
+        <td>{{ transaction.quantity }}</td>
+        <td>{{ transaction.timestamp }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

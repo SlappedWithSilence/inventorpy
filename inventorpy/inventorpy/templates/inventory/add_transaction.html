@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Inventory Item</title>
+    <title>Add Transaction</title>
 </head>
 <body>
-    <h1>Add Inventory Item</h1>
+    <h1>Add Transaction</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
-    <a href="{% url 'inventory_list' %}">Back to List</a>
+    <a href="{% url 'project_list' %}">Back to Projects</a>
 </body>
 </html>

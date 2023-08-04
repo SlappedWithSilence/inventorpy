@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from inventorpy.views import inventory_list, add_inventory_item
+from inventorpy.views import inventory_list, add_inventory_item, project_list, add_project
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inventory_list, name='inventory_list'),
-    path('add/', add_inventory_item, name='add_inventory_item'),
+    path('', project_list, name='project_list'),
+    path('add_item/', add_inventory_item, name='add_inventory_item'),
+    path('add_project/', add_project, name='add_project'),
 ]

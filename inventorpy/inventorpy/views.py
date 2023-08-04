@@ -31,5 +31,5 @@ def add_project(request):
             form.save()
             return redirect('project_list')
     else:
-        form = InventoryItemForm()
+        form = ProjectForm()
     return render(request, 'inventory/add_project.html', {'form': form})

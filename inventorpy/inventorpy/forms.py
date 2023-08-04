@@ -12,7 +12,7 @@ class InventoryItemForm(forms.ModelForm):
 class InventoryTransacitonForm(forms.ModelForm):
     class Meta:
         model = InventoryTransaction
-        fields = ['item', 'project', 'quantity']
+        fields = ['item', 'project', 'quantity', 'purchaser']
 
 
 class ProjectForm(forms.ModelForm):

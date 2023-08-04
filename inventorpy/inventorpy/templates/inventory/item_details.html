@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ item.name }} Details</title>
+</head>
+<body>
+    <p>Description: {{ item.description }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <a href="{% url 'inventory_list' %}">Back to List</a>
+</body>
+</html>
